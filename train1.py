@@ -180,7 +180,7 @@ def train_model(
             Path(dir_checkpoint).mkdir(parents=True, exist_ok=True)
             state_dict = model.state_dict()
             state_dict["mask_values"] = dataset.mask_values
-            torch.save(state_dict, str(dir_checkpoint / f"checkpoint_epoch{epoch+20}.pth"))
+            torch.save(state_dict, str(dir_checkpoint / f"checkpoint_epoch{epoch}.pth"))
             logging.info(f"Checkpoint {epoch} saved!")
 
 
